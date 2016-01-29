@@ -3,7 +3,7 @@
 #or not the various forms of energy are conserved. There will be multiple
 #functions presented to accomplish this purpose.
 import matplotlib.pyplot as plt
-from numpy import array
+from numpy import array, cross
 from math import pi
 from numpy.linalg import norm
 
@@ -62,10 +62,10 @@ def energy(pieces):
     for i,k in enumerate(pieces[4]):
         v = array([pieces[2][i],pieces[3][i]], float)
         r = array([pieces[0][i],pieces[1][i]], float)
-        L = array([v[0]*r[1],-v[1]*r[0]], float)
-        K.append(0.5*norm(v))
+        L = cross(r,v) #array([v[0]*r[1],-v[1]*r[0]], float)
+        K.append(0.5*norm(v)**2)
         P.append(-(4.*(pi**2))/norm(r))
-        T.append(0.5*norm(v)-((4.*(pi**2))/norm(r)))
+        T.append(0.5*norm(v)**2-((4.*(pi**2))/norm(r)))
         l.append(norm(L))
     return K,P,T,l
 
@@ -76,7 +76,7 @@ def plot_it_all(initial_conditions):
     x,y,vx,vy,t = getArrays(initial_conditions)
     k,p,T,l = energy([x,y,vx,vy,t])
     plt.close('all')
-    plt.plot(t,k,'g--',t,p,'r--',t,T,'y--',t,l,'--')
+    plt.plot(t,k,'g--',t,p,'r--',t,T,'y--',t,l,'b--')
     plt.title('Green for K, R for P, Y for T, L is black')
     plt.show()
 '''    plt.figure(1)
