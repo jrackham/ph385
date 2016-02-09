@@ -1,0 +1,34 @@
+\begin{thebibliography}{3}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Griffiths and College}(1999)}]{grif}
+\bibinfo{author}{\bibfnamefont{D.~J.} \bibnamefont{Griffiths}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{College}},
+  \emph{\bibinfo{title}{Introduction to electrodynamics}},
+  vol.~\bibinfo{volume}{3} (\bibinfo{publisher}{prentice Hall Upper Saddle
+  River, NJ}, \bibinfo{year}{1999}).
+
+\bibitem[{\citenamefont{Giordano and Nakanishi}(2006)}]{gio}
+\bibinfo{author}{\bibfnamefont{N.~J.} \bibnamefont{Giordano}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Nakanishi}},
+  \emph{\bibinfo{title}{Computational physics}} (\bibinfo{publisher}{Pearson
+  Education India}, \bibinfo{year}{2006}).
+
+\bibitem[{\citenamefont{Newman}(2012)}]{new}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Newman}},
+  \emph{\bibinfo{title}{Computational Physics}}
+  (\bibinfo{publisher}{CreateSpace Independent Publishing Platform},
+  \bibinfo{year}{2012}).
+
+\end{thebibliography}
